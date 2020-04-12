@@ -1,9 +1,9 @@
 "use strict";
 
 let profile = [
-	["NAME", "IBRAHIM ODUOLA"],
-	["AGE", "21 YEARS OLD"],
-	["SPECIALITY/PREFERENCE", "SERVER-SIDE DEVELOPMENT/BACK-END DEVELOPMENT"],
+	["Name", "Ibrahim Oduola"],
+	["Age", "21 years old"],
+	["Speciality/Preference", "Server-side/Back-end development"],
 ]
 
 
@@ -22,24 +22,26 @@ let about = [
 
 let project = [
 	["Web Portfolio", 
-	"My online portfolio which is the webpage you are right now, is totally written with HTML, CSS and Javascript from scratch. I wrote everything myself."]
+	"This webpage is my first official web portfolio. It is a static page designed with HTML, CSS and vanilla Javascript from scratch (no bootstraps) and served via github pages. I designed it to be interractive, simple and elegant."]
 ];
 
 let skill = [
 	['Python', 5],
-	["Javascript (vanilla)", 5],
+	["Javascript (vanilla)", 4],
 	['Django', 5],
 	["RESTful API (Django Rest Framework)", 5],
 	['React', 0],
 	['Jquery', 1],
-	['HTML', 4],
-	['CSS', 3],
-	['bootstrap', 3],
-	["Azure", 3],
-	['heroku', 5],
+	['HTML5', 4],
+	['CSS3', 3],
+	['Bootstrap', 3],
+	['Websockets (Redis & Django channels)', 3],
+	["Microsoft Azure", 3],
+	['Heroku', 5],
 	["pip packages", 5],
 	['npm', 3],
 	['git', 5],
+	['VS code', 4],
 	['English language', 5],
 	['Español', 2],
 	['Arabic', 1],
