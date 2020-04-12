@@ -79,7 +79,8 @@ header .current a{
 }
 
 
-/*showCase Section styles*/
+/*showCase Section styles This is where there is a background picture
+and an overlying text*/
 
 #showCase{
 	min-height: 400px;
@@ -96,7 +97,8 @@ header .current a{
 	color: black;
 }
 
-/*contactMe sectio Styles*/
+/*contactMe section Styles This is where is have links to my other social accounts
+plus my email*/
 #contactMe {
 	padding: 15px;
 	color: #ffffff;
@@ -118,14 +120,16 @@ header .current a{
 	padding-bottom: 10px;
 }
 
-/*introduction Section Styles*/
+/*introduction Section Styles This is where i Have a picture of me and I welcome
+the reader to my page*/
 
 #introduction{
 	margin-top: 20px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
 }
-
+/**/
 #introduction .introCircle {
+	/*The frame containing the image*/
 	float: left;
 	width: 45%;
 	padding: 6px;
@@ -133,17 +137,20 @@ header .current a{
 }
 
 #introduction .introCircle img{
+	/*the image itself*/
 	width: 180px;
 	border-radius: 50%;
 	padding-top: 22px;
 }
 
 #introduction .introCircle p{
+	/*my welcoming message to the reader*/
 	text-align: justify;
 	color: darkblue;
 }
 
 #introduction .introCircle h1{
+	/*the header of my welcoming message to the reader that currently says 'HELLO!'*/
 	color: brown;
 	text-align: center;
 }
@@ -152,21 +159,25 @@ header .current a{
 /* information Sections Styles would sit here*/
 
 #informationTable{
+	/*The whole of the informationTable section*/
 	margin-top: 40px;
 	min-height: 400px;
 	border: 2px solid darkblue;
 }
 
 #informationTable .data {
+	/*This part of the informationTable conatins the links*/
 	display: table;
 	width: 100%
 }
 .heads {
+	/*a subsection of the #informationTable .data that directly house the links*/
 	display: table-header-group;
 	font-size: 1.2em;
 }
 
 .heads a{
+	/*The links themselves*/
 	display: table-cell;
 	border-bottom:1px solid darkblue;
 	border-right: 1px solid darkblue;
@@ -177,6 +188,7 @@ header .current a{
 
 
 .heads .active{
+	/*When the links are active*/
 	font-weight: bold;
 	color: white;
 	background-color: darkblue;
@@ -184,20 +196,66 @@ header .current a{
 }
 
 .heads a:hover{
+	/*When the links are hovered on*/
 	font-weight: bold;
 }
 
+#informationBody {
+	/*The entire content except from the links are housed here*/
+	padding: 0 20px 10px 10px;
+	text-align: justify;
+}
+
 .initial {
+	/*the first text that appears in the informationBody before the reader
+	clicks on any of the links*/
 	text-align: center;
 	font-weight: 600;
 	color: brown;
 }
 
-#informationBody {
-	padding: 0 20px 10px 10px;
-	text-align: justify;
+#informationBody canvas{
+	/*The styles for the drawings withing the body
+	actually, the drawings are under the skillClass but since no other class under the
+	#informationbody has a canvas...this applies to it*/
+	float: right;
+	padding-top: -10px;
 }
 
+#informationBody .skillClass {
+	/*this houses everything that show up when the reader clicks on 'Skils' and 'profile'*/
+	height: 30px;
+	padding-top: 10px;
+	border-bottom: 1px solid blue;
+}
+
+#informationBody .skillClass:hover {
+	/*hovering on items displayed by the 'skill' and 'profile' link*/
+	color: blue;
+	font-weight: bold;
+	border-bottom: 2px solid blue;
+}
+
+#informationBody .projectClass {
+	/*This houses everyhting that show uo when the user clicks on the 'project' link*/
+	border-bottom: 1px solid blue;
+}
+
+#informationBody .projectClass:hover {
+	/*hovering on items displayed by the 'project' link*/
+	border-bottom: 2px solid blue;
+	font-weight: bold;
+}
+
+#informationBody .projectClass a {
+	/*the project link comes with an <a> tag which refers to the webpage
+	of individual projects, this is the styles for those <a> tag*/
+	color: black;
+	font-size: 1.2em;
+	text-decoration: none;
+	border-bottom: 1px solid black;
+	text-transform: uppercase;
+}
 
 
 

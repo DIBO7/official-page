@@ -1,13 +1,15 @@
 "use strict";
 
 let profile = [
+	/*profiles contains arrays of my information [name, value]*/
 	["Name", "Ibrahim Oduola"],
 	["Age", "21 years old"],
 	["Speciality/Preference", "Server-side/Back-end development"],
-]
+];
 
 
 let about = [
+/*About contains arrays of paragraphs... the formatters treats an array as a paragaraph*/
 [
 "Hi, thanks again for visiting my web portfolio. ",
 "Actually, I am relatively new to the world of programming, however, I have been relentlessly working towards developing my skills and learning new valuable skills in the world of programming every single day for the past five years of my life. ",
@@ -18,20 +20,32 @@ let about = [
 "I am a persistent problem solver and when I realize how facinating it is to actually write codes to productively solve problems for people, I had to teach myself lots of things about programming. ",
 "I hope to work in teams of creative developers someday, not just web-app or software developers but all ranges of developers including artificial intelligence developers.",
 ],
-]
+];
 
 let project = [
-	["Web Portfolio", 
-	"This webpage is my first official web portfolio. It is a static page designed with HTML, CSS and vanilla Javascript from scratch (no bootstraps) and served via github pages. I designed it to be interractive, simple and elegant."]
+	/*project holds arrays of information about my projects
+	the first item in the array is the name of the project
+	the second item in the array is the link to the project's webpage
+	and the final item is a little detail about the project*/
+	["Web Portfolio", '',
+	"This webpage is my first official web portfolio. It is a static page designed with HTML, CSS and vanilla Javascript from scratch (no bootstraps) and served via github pages. I designed it to be interractive, simple and elegant."],
+	["Django Abstract Startpoint", '',
+	"Django Abstract Startpoint is my open-source python code that helps django developers bypass certain usual django setups, thus, taking a newly created django project to a point where developers can go straight to writing the important stuff and it would automatically write/edit the usual stuff."]
 ];
 
 let skill = [
+	/*the skill also contains arrays of skill
+	the first item is the array is the skill
+	and the second is the level of knowledge on that skill*/
 	['Python', 5],
 	["Javascript (vanilla)", 4],
 	['Django', 5],
 	["RESTful API (Django Rest Framework)", 5],
 	['React', 0],
 	['Jquery', 1],
+	['Postgresql', 1],
+	['MySql', 1],
+	['MongoDB', 0],
 	['HTML5', 4],
 	['CSS3', 3],
 	['Bootstrap', 3],
@@ -74,40 +88,38 @@ for (let i=0; i<selectors.length; i++){
 		highligher(selectors[i]);
 		let text;
 		if (i === 1){
-			text = profileFormatter(profile)
+			infoBody.innerHTML = profileFormatter(profile)
 		}else if(i === 0){
-			text = aboutFormatter(about)
+			infoBody.innerHTML = aboutFormatter(about)
 		}else if (i === 3){
-			text = skillFormatter(skill)
+			infoBody.innerHTML = skillFormatter(skill)
+			skill.forEach(s => {
+				const canvas = document.getElementById(ToID(s[0]));
+				let diagram = canvas.getContext('2d');
+				diagram.fillStyle = 'blue';
+				diagram.fillRect(2, 2, 20*s[1]||5, 15)
+			})
 		}else if (i === 2){
-			text = projectFormatter(project)
+			infoBody.innerHTML = projectFormatter(project)
 		}
-		infoBody.innerHTML = text;
 	})
 }
 
 function highligher(e){
+	/*This ensure thats only the clisked linked passed as the 'e' argument
+	is highlighted*/
 	for (let items of selectors){
 		items.classList.remove('active');
 	}
 	return e.classList.add("active");
 }
 
-/*PROFILE and PROJECTS use the same writng or displaying format,
-where the key and values are withing one array.... let say typeOneFormatter
-
-ABOUT uses a different displaying format...
-where one paragraph amongs others are stored in one array.....let say typeTwoFormatter
-
-& SKILL uses a differen array which is very similar to PROFILE AND PROJECTS kind of display format
-except the value would not be displayed the way they are but used to compute a diagramatic proficiency level.... let say typeThreeFormatter*/
-
-
 function profileFormatter(array){
+	/*this is the formatter for the profile contents*/
 	let output = "";
 
 	array.forEach(a=>{
-		let statement = "<p> ";
+		let statement = "<p class='skillClass'> ";
 		statement += a[0] + ': ' + a[1];
 		statement += " </p>";
 		output += statement
@@ -116,6 +128,7 @@ function profileFormatter(array){
 }
 
 function aboutFormatter(array){
+	/*this i sthe formatter for the about contents*/
 	let output = "";
 
 	array.forEach(arrays => {
@@ -130,21 +143,33 @@ function aboutFormatter(array){
 }
 
 function skillFormatter(array){
+	/*this is the formatter for the skills contents*/
 	let output = "";
 
 	array.forEach(a => {
-		let statement = "<p> " + a[0] + " </p>";
+		let statement = `<div class='skillClass'> ${a[0]} <canvas id=${ToID(a[0])} width=100 height=10> </canvas></div>`;
 		output += statement;
+	})
+	return output;
+}
+
+function projectFormatter(array){
+	/*This is the formatter for the project contents*/
+	let output = "";
+	let c = 0;
+	array.forEach(a => {
+		c++;
+		let paragraph = `<div class='projectClass'> 
+						<a href='${a[1]}'>${c}. ${a[0]} </a> 
+						<p> ${a[2]} </p> 
+						</div>`;
+		output += paragraph
 	})
 	return output
 }
 
-function projectFormatter(array){
-	let output = "";
 
-	array.forEach(a => {
-		let paragraph = "<p> " + a[0] + "</p> <p> " + a[1] + "</p>";
-		output += paragraph
-	})
-	return output
+function ToID(word){
+	//Changes anyword to ID by replacing the whitespaces with "_"
+	return word.replace(/\s/g, '_')
 }
