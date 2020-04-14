@@ -202,7 +202,7 @@ the reader to my page*/
 
 #informationBody {
 	/*The entire content except from the links are housed here*/
-	padding: 0 20px 10px 10px;
+	padding: 0 60px 30px 80px;
 	text-align: justify;
 }
 
@@ -225,14 +225,16 @@ the reader to my page*/
 #informationBody .skillClass {
 	/*this houses everything that show up when the reader clicks on 'Skils' and 'profile'*/
 	height: 30px;
-	padding-top: 10px;
+	padding-top: 8px;
 	border-bottom: 1px solid blue;
+	font-size: .8em;
 }
 
 #informationBody .skillClass:hover {
 	/*hovering on items displayed by the 'skill' and 'profile' link*/
 	color: blue;
 	font-weight: bold;
+	padding-bottom: 3px;
 	border-bottom: 2px solid blue;
 }
 
