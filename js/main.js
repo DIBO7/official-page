@@ -29,7 +29,7 @@ let project = [
 	and the final item is a little detail about the project*/
 	["Web Portfolio", '',
 	"This webpage is my first official web portfolio. It is a static page designed with HTML, CSS and vanilla Javascript from scratch (no bootstraps) and served via github pages. I designed it to be interractive, simple and elegant."],
-	["Django Abstract Startpoint", 'https://ibra-portfolio.github.io/DASP-docs/',
+	["Django Abstract Startpoint", 'https://ibra-codes.github.io/DASP-docs/',
 	"Django Abstract Startpoint is my open-source python code that helps django developers bypass certain usual django setups, thus, taking a newly created django project to a point where developers can go straight to writing the important stuff and it would automatically write/edit the usual stuff."]
 ];
 
@@ -41,7 +41,7 @@ let skill = [
 	["Javascript (vanilla)", 4],
 	['Django', 5],
 	["RESTful API (Django Rest Framework)", 5],
-	['React js', 2],
+	['React js', 3],
 	['Jquery', 1],
 	['PostgreSql', 1],
 	['MySql', 1],
@@ -49,12 +49,9 @@ let skill = [
 	['HTML5', 4],
 	['CSS3', 3],
 	['Bootstrap', 3],
-	['Websockets (Redis & Django channels)', 3],
-	["Microsoft Azure", 3],
+	['Websockets (Redis & Django channels)', 2],
 	['Heroku', 4],
-	["pip packages", 4],
-	['npm', 1],
-	['node js', 1],
+	['node js', 2],
 	['git', 5],
 	['English language', 5],
 	['Español', 2],
