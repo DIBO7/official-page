@@ -29,7 +29,7 @@ let project = [
 	and the final item is a little detail about the project*/
 	["Web Portfolio", '',
 	"This webpage is my first official web portfolio. It is a static page designed with HTML, CSS and vanilla Javascript from scratch (no bootstraps) and served via github pages. I designed it to be interractive, simple and elegant."],
-	["Django Abstract Startpoint", 'https://ibra-codes.github.io/DASP-docs/',
+	["Django Abstract Startpoint", 'https://ibracodes.github.io/DASP-docs/',
 	"Django Abstract Startpoint is my open-source python code that helps django developers bypass certain usual django setups, thus, taking a newly created django project to a point where developers can go straight to writing the important stuff and it would automatically write/edit the usual stuff."]
 ];
 
