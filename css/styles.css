@@ -1,273 +1,205 @@
-body {
+body{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 	font-family: tahoma, Halvetica, sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	/* all three lines above are equivalent to :
-	font: 15px/1.5 tahoma, Halvetica, sans-serif;*/
-	padding:0;
-	margin:0;
-	background-color: #f4f4f4; /*light grey*/
-}
-/*Global*/
-.container {
-	width: 80%;
-	margin: auto; /*moves it to the middle*/
-	overflow: hidden /*anything overflowing outside the div should be hidden to avoid scroll bars*/
 }
 
-ul{
-	margin:0;
-	padding:0;
-}
-
-button{
-	height: 30px;
-	background: #e8491d;
-	border:0;
-	padding-left: 20px;
-	padding-right: 20px;
-	color: #ffffff;
-}
-
-/*Headers*/
 header{
-	background: darkblue;
-	color: white;
-	padding-top: 30px;
-	min-height: 70px;
-	border-bottom: brown 3px solid; /*#e8491d orange similar to my brown*/
+	background-color: blueviolet;
+    padding: 15px;
+    color: #f8f8f8;
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
 }
 
-header a{
-	color: #ffffff; /*white*/
+
+#portfolio{
+	display: flex;
+    justify-content: space-between;
+    margin: 15px 5px;
+    min-height: 80vh;
+}
+
+#identity{
+	width: 35%;
+	text-align: center;
+}
+
+#identity img{
+	width: 240px;
+	height: 280px;
+	border-radius: 20px;
+	box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, .4);
+}
+
+#social-icons{
+	display: flex;
+	justify-content: space-around;
+	width: 60%;
+	margin: 10px auto;
+}
+
+#social-icons div img{
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+}
+
+#content{
+	width: 65%;
+	padding: 0 20px;
+}
+
+#intro p{
+	font-size: .7rem;
+	text-align: justify;
+	line-height: 1.6rem;
+	letter-spacing: .06rem;
+
+}
+
+#content section{
+    display: flex;
+    flex-direction: column;
+}
+
+#content section .navs{
+	display: flex;
+	justify-content: space-between;	
+}
+
+#content section .navs div{
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: blueviolet;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#content section .navs div:hover, #content section .navs div.active{
+    background-color: blueviolet;
+    color: #f8f8f8;
+    border-radius: 0px 50px 0 0;
+}
+
+#content-display{
+	width: 100%;
+	min-height: 30vh;
+	border-top: 1px dashed blueviolet;
+}
+
+footer{
+	background-color: blueviolet;
+	padding: 5px 0;
+    text-align: center;
+    color: #f7f7f7;
+    font-size: .8rem;	
+    letter-spacing: .25rem;
+}
+
+
+#project-display, #expertise-display, #info-display{
+	display: none;
+}
+
+#project-display.active{
+	display: block;
+}
+
+#project-display div{
+	border-bottom: 1px dotted blueviolet;
+	padding: 0;
+}
+
+#project-display div h1{
+	margin: 10px 0;
+	padding: 0;
+}
+
+#project-display div h1 a{
 	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
-	border-bottom: 1px brown transparent;
+	font-size: .9rem;
+	padding: 0;
+	margin: 0;
+	color: blueviolet;
+	letter-spacing: .2rem;
 }
 
-header a:hover{
-	color: #cccccc; /*grey*/
-	font-weight: bold;
-	border-bottom: 1px brown solid;
+#project-display div h1 a:hover{
+	color: blue;
 }
 
-
-header li {
-	float: left;
-	display: inline;
-	padding: 0 20px 0 20px; /*top right bottom left*/
-}
-
-header #myBrand{
-	float: left;
-}
-
-header #myBrand h1{
+#project-display div p{
+	text-align: justify;
+	font-size: .7rem;
+	line-height: 1.6rem;
+	letter-spacing: .06rem;
+	padding: 0;
 	margin: 0;
 }
 
-header nav{
-	float:right;
-	margin-top: 10px;
+#expertise-display.active{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 15px 5px;
 }
 
-header .current a{
-	color: brown;
-	font-weight: bold;
-	border-bottom: 1px solid brown;
+#expertise-display div{
+	background: rgba(20, 20, 60, .4);
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin: 5px;
+	font-size: .7rem;
+	letter-spacing: .07;
+	color: #f0f0f0;
 }
 
-
-/*showCase Section styles This is where there is a background picture
-and an overlying text*/
-
-#showCase{
-	min-height: 400px;
-	background-image: url('../img/cyberwall.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align: center;
+#info-display.active{
+	display: block;
 }
 
-#showCase p{
-	font-size: 40px;
-	margin-top: 200px;
-	margin-bottom: 10px;
-	color: black;
+#info-display .info-body{
+	display: flex;
+	justify-content: space-between;
+	font-size: .7rem;
+	letter-spacing: .06rem;
+	line-height: 1.4rem;
+	width: 90%;
+	margin: 10px auto;
 }
 
-/*contactMe section Styles This is where is have links to my other social accounts
-plus my email*/
-#contactMe {
-	padding: 15px;
-	color: #ffffff;
-	background-color: darkblue;
+.info-body .info-head{
+	width: 20%;
+	color: blueviolet;
 }
 
-#contactMe li{
-	float: left;
-	padding: 12px 20px 0 20px;
-	display: inline;
-}
-#contactMe li a{
-	color: white;
-	text-decoration: none;
+.info-body .info{
+	width: 60%;
 }
 
-#contactMe p{
-	float: right;
-	padding-bottom: 10px;
+.info-body .info span{
+	display: block;
+	font-style: italic;
 }
 
-/*introduction Section Styles This is where i Have a picture of me and I welcome
-the reader to my page*/
+@media only screen and (max-width: 800px){
+	#portfolio{
+		display: flex;
+		flex-direction: column;
+	}
+	#identity{
+		width: 90%;
+		margin: 0 auto;
+	}
 
-#introduction{
-	margin-top: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
-}
-/**/
-#introduction .introCircle {
-	/*The frame containing the image*/
-	float: left;
-	width: 45%;
-	padding: 6px;
-	text-align: center;
-}
+	#content{
+		width: 90%;
+		margin: 0 auto;
+	}
 
-#introduction .introCircle img{
-	/*the image itself*/
-	width: 180px;
-	border-radius: 50%;
-	padding-top: 22px;
-}
-
-#introduction .introCircle p{
-	/*my welcoming message to the reader*/
-	text-align: justify;
-	color: darkblue;
-}
-
-#introduction .introCircle h1{
-	/*the header of my welcoming message to the reader that currently says 'HELLO!'*/
-	color: brown;
-	text-align: center;
-}
-
-
-/* information Sections Styles would sit here*/
-
-#informationTable{
-	/*The whole of the informationTable section*/
-	margin-top: 40px;
-	min-height: 400px;
-	border: 2px solid darkblue;
-}
-
-#informationTable .data {
-	/*This part of the informationTable conatins the links*/
-	display: table;
-	width: 100%
-}
-.heads {
-	/*a subsection of the #informationTable .data that directly house the links*/
-	display: table-header-group;
-	font-size: 1.2em;
-}
-
-.heads a{
-	/*The links themselves*/
-	display: table-cell;
-	border-bottom:1px solid darkblue;
-	border-right: 1px solid darkblue;
-	text-decoration: none;
-	color: darkblue;
-	text-align: center;
-}
-
-
-.heads .active{
-	/*When the links are active*/
-	font-weight: bold;
-	color: white;
-	background-color: darkblue;
-	border-bottom: 1px solid transparent;
-}
-
-.heads a:hover{
-	/*When the links are hovered on*/
-	font-weight: bold;
-}
-
-#informationBody {
-	/*The entire content except from the links are housed here*/
-	padding: 0 60px 30px 80px;
-	text-align: justify;
-}
-
-.initial {
-	/*the first text that appears in the informationBody before the reader
-	clicks on any of the links*/
-	text-align: center;
-	font-weight: 600;
-	color: brown;
-}
-
-#informationBody canvas{
-	/*The styles for the drawings withing the body
-	actually, the drawings are under the skillClass but since no other class under the
-	#informationbody has a canvas...this applies to it*/
-	float: right;
-	padding-top: -10px;
-}
-
-#informationBody .skillClass {
-	/*this houses everything that show up when the reader clicks on 'Skils' and 'profile'*/
-	height: 30px;
-	padding-top: 8px;
-	border-bottom: 1px solid blue;
-	font-size: .8em;
-}
-
-#informationBody .skillClass:hover {
-	/*hovering on items displayed by the 'skill' and 'profile' link*/
-	color: blue;
-	font-weight: bold;
-	padding-bottom: 3px;
-	border-bottom: 2px solid blue;
-}
-
-#informationBody .projectClass {
-	/*This houses everyhting that show uo when the user clicks on the 'project' link*/
-	border-bottom: 1px solid blue;
-}
-
-#informationBody .projectClass:hover {
-	/*hovering on items displayed by the 'project' link*/
-	border-bottom: 2px solid blue;
-	font-weight: bold;
-}
-
-#informationBody .projectClass a {
-	/*the project link comes with an <a> tag which refers to the webpage
-	of individual projects, this is the styles for those <a> tag*/
-	color: black;
-	font-size: 1.2em;
-	text-decoration: none;
-	border-bottom: 1px solid black;
-	text-transform: uppercase;
-}
-
-
-
-
-/*footer*/
-footer{
-	padding:20px;
-	margin-top: 30px;
-	color: #ffffff;
-	background-color: darkblue;
-	text-align: center;
-	font-size: 0.7em;
 }
