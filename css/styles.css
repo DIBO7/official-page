@@ -9,10 +9,13 @@ header{
 	background-color: blueviolet;
     padding: 15px;
     color: #f8f8f8;
-    font-size: 1.4rem;
-    letter-spacing: .3rem;
 }
 
+header h1{
+	margin: 0;
+	font-size: 1.4rem;
+	letter-spacing: .3rem;
+}
 
 #portfolio{
 	display: flex;
@@ -116,12 +119,12 @@ footer{
 	padding: 0;
 }
 
-#project-display div h1{
+#project-display div h2{
 	margin: 10px 0;
 	padding: 0;
 }
 
-#project-display div h1 a{
+#project-display div h2 a{
 	text-decoration: none;
 	font-size: .9rem;
 	padding: 0;
@@ -130,7 +133,7 @@ footer{
 	letter-spacing: .2rem;
 }
 
-#project-display div h1 a:hover{
+#project-display div h2 a:hover{
 	color: blue;
 }
 
@@ -202,4 +205,21 @@ footer{
 		margin: 0 auto;
 	}
 
+	#content section .navs div{
+	    font-size: .7rem;
+	    font-weight: 600;
+	    letter-spacing: .06rem;
+	    padding: 5px 0;
+	}
+
+	#content section .navs div:hover, #content section .navs div.active{
+	    border-radius: 0;
+	}
+
+	#project-display div h2{
+		margin: 3px 0;
+	}
+	.info-body .info-head{
+		overflow-wrap: break-word;
+	}
 }
