@@ -1,0 +1,66 @@
+/*The Styles For The Banner Area*/
+
+#banner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner .ground{/*The actual banner background photo*/
+    width: 100%;
+    max-height: 100vh;
+    opacity: .9;   
+}
+
+#banner .on-banner{
+    position: absolute;
+    bottom: 160px;
+    left: 40px;
+    right: 40px;
+    background: rgba(255, 255, 255, .7);
+    color: #084f93;
+    font-size: .8rem;
+    padding: 20px 60px;
+    letter-spacing: .18rem;
+    font-style: italic;
+    text-align: center;
+    z-index: 4; /*not necessary*/
+}
+
+#banner .on-banner h1{
+    
+}
+
+#banner .on-banner div{	
+	width: 30%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+#banner .on-banner div a{
+	
+}
+
+#banner .on-banner div a img{
+	width: 25px;
+	padding: 10px 10px 0;
+}
+
+#banner .on-banner div a:hover img{
+	width: 35px;
+	padding: 0;
+}
+
+
+@media only screen and (max-width: 700px){
+
+	#banner .ground{/*The actual banner background photo*/
+		height: 60vh;
+	}
+
+	#banner .on-banner{
+		bottom: 0;
+		line-height: 1.5rem;
+	}
+}
