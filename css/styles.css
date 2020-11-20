@@ -6,6 +6,9 @@
 	--plane: #f6f7cd;
 }
 
+html{
+	scroll-behavior: smooth;
+}
 
 
 body {

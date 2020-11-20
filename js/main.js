@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 let project_command = document.getElementById('project-button');
 let expertise_command = document.getElementById('expertise-button');
 let info_command = document.getElementById('info-button');
@@ -38,3 +39,5 @@ info_command.addEventListener('click', ()=>{
 	info_display.classList.add('active')
 	return;
 })
+
+*/
