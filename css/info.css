@@ -1,0 +1,40 @@
+/*Css Styles for the Information section*/
+
+#information{
+    margin: 0 0 30px 0;
+}
+
+.row{
+    width: 96%;
+    margin: 10px auto;
+
+}
+
+.row span{
+    font-size: .9rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.row div{
+	font-size: 1.2rem;
+	margin: 5px 0;
+	font-style: oblique;
+	text-align: justify
+}
+
+@media only screen and (max-width: 700px){
+	.row{
+		width: 96%;
+	}
+    
+    .row span{
+    	font-size: .8rem;
+    }
+
+	.row div{
+		font-size: .95rem;
+
+	}
+}

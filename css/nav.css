@@ -1,0 +1,47 @@
+/*Css styles for the navigation section*/
+
+#navigator{
+	margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    position: sticky;
+    top: 0;
+}
+
+#navigator h2{
+    margin: 0;
+}
+
+#navigator div{
+
+}
+
+#navigator div a{
+    text-decoration: none;
+    color: var(--main-primary);
+}
+
+#navigator div a:hover{
+	color: var(--light-primary);
+	border-bottom: 5px dashed;
+}
+
+@media only screen and (max-width: 850px){
+	#navigator{
+		display: block;
+	}
+	#navigator h2{
+		display: none;
+	}
+	#navigator div{
+		float: right;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	#navigator{
+		display: none;
+	}
+	
+}

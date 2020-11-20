@@ -1,66 +1,100 @@
-/*The Styles For The Banner Area*/
+/*CSS Styles for the banner section ONLY*/
 
 #banner{
-    width: 100%;
-    overflow: hidden;
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-#banner .ground{/*The actual banner background photo*/
+#banner .ground{
+    /*the actual background image*/
     width: 100%;
     max-height: 100vh;
-    opacity: .9;   
+    /* Add the blur effect */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }
 
-#banner .on-banner{
+.overlay{
     position: absolute;
-    bottom: 160px;
-    left: 40px;
-    right: 40px;
-    background: rgba(255, 255, 255, .7);
-    color: #084f93;
-    font-size: .8rem;
-    padding: 20px 60px;
-    letter-spacing: .18rem;
-    font-style: italic;
-    text-align: center;
-    z-index: 4; /*not necessary*/
+    background: var(--faded-primary);
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    opacity: .2
 }
 
-#banner .on-banner h1{
+.on-banner{
+    position: absolute;
+    bottom: 180px;
+    left: 40px;
+    right: 50px;
+    color: var(--light-primary);
+    background: var(--plane);
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.on-banner h1{
+    font-size: 1.2rem;
+    letter-spacing: .12rem;
+    line-height: 2.4rem;
+}
+
+.on-banner div{
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.on-banner div a{
     
 }
 
-#banner .on-banner div{	
-	width: 30%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
+.on-banner div a img{
+    width: 30px;
+    padding: 10px 0 0;
 }
 
-#banner .on-banner div a{
-	
+.on-banner div a:hover img{
+    width: 40px;
+    padding: 0;
 }
 
-#banner .on-banner div a img{
-	width: 25px;
-	padding: 10px 10px 0;
+#banner .minor{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center; 
+    color: var(--plane);
+    cursor: pointer;
+    font-size: .9rem;
+    letter-spacing: .2rem;
 }
-
-#banner .on-banner div a:hover img{
-	width: 35px;
-	padding: 0;
-}
-
 
 @media only screen and (max-width: 700px){
-
-	#banner .ground{/*The actual banner background photo*/
-		height: 60vh;
-	}
-
-	#banner .on-banner{
-		bottom: 0;
-		line-height: 1.5rem;
-	}
+    .ground{
+        min-height: 60vh;
+    }
+    .on-banner{
+        bottom: 65px;
+        left: 8px;
+        right: 8px;
+        opacity: .9;
+    }
+    .on-banner h1{
+        font-size: 1.1rem;
+    }
+    .on-banner div{
+        width: 50%;
+    }
+    #banner .minor{
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;        
+    }
 }

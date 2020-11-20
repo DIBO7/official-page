@@ -1,0 +1,37 @@
+/*CSS styels for the education and experience section*/
+
+#education{
+    margin: 40px 0;
+}
+
+.show{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.show h3{
+	text-align: center;
+	margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .4);
+}
+
+.show h3 span{
+    font-size: .9rem;
+    margin: 0 0 0 10px;
+}
+
+.show p{
+	margin: 0;
+}
+
+@media only screen and (max-width: 700px){
+	.show{
+		width: 100%;
+	}
+	.show h3{
+		font-size: 1rem;		
+	}
+}
