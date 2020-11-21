@@ -1,12 +1,18 @@
 /*Css styles for the navigation section*/
 
 #navigator{
-	margin: 25px auto;
+	margin: 2px auto;
     display: flex;
-    justify-content: space-between;
-    width: 95%;
+    justify-content: space-around;
     position: sticky;
+    width: 100%;
     top: 0;
+    left: 0;
+    right: 8px;
+    background: var(--accent);
+    padding: 5px 0;
+    opacity: .8;
+    z-index: 10;
 }
 
 #navigator h2{
@@ -29,13 +35,13 @@
 
 @media only screen and (max-width: 850px){
 	#navigator{
-		display: block;
+		display: inline-block;
 	}
 	#navigator h2{
 		display: none;
 	}
 	#navigator div{
-		float: right;
+		text-align: center;
 	}
 }
 

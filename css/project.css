@@ -45,18 +45,24 @@
 }
 
 .box a{
-	text-decoration: none;
-	display: block;
-	text-align: center;
-	color: var(--faded-primary);
-	background: rgba(0, 0, 0, .8);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: var(--faded-primary);
+    background: rgba(0, 0, 0, .8);
 }
 
 .box:hover div p{
-	opacity: 1;
+    opacity: 1;
 }
 
 .box a:hover{
     background-color: var(--main-primary);
-	color: var(--plane);
+    color: var(--plane);
+}
+
+@media only screen and (max-width: 700px){
+    .box{
+        margin: 3px auto;
+    }
 }

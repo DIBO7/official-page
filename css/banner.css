@@ -9,12 +9,13 @@
 #banner .ground{
     /*the actual background image*/
     width: 100%;
-    max-height: 100vh;
+    height: 100vh;
     /* Add the blur effect */
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
 }
 
+/*
 .overlay{
     position: absolute;
     background: var(--faded-primary);
@@ -24,13 +25,14 @@
     right: 0;
     opacity: .2
 }
+*/
 
 .on-banner{
     position: absolute;
-    bottom: 180px;
+    bottom: 280px;
     left: 40px;
     right: 50px;
-    color: var(--light-primary);
+    color: var(--main-primary);
     background: var(--plane);
     padding: 5px 0px;
     text-align: center;
@@ -65,10 +67,11 @@
 
 #banner .minor{
     position: absolute;
-    bottom: 30px;
+    bottom: 90px;
     left: 0;
     right: 0;
-    text-align: center; 
+    text-align: center;
+    text-decoration: none;
     color: var(--plane);
     cursor: pointer;
     font-size: .9rem;
@@ -76,25 +79,20 @@
 }
 
 @media only screen and (max-width: 700px){
-    .ground{
-        min-height: 60vh;
-    }
     .on-banner{
-        bottom: 65px;
+        bottom: 165px;
         left: 8px;
         right: 8px;
-        opacity: .9;
     }
     .on-banner h1{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .on-banner div{
         width: 50%;
     }
     #banner .minor{
-        bottom: 20px;
+        bottom: 80px;
         left: 0;
-        right: 0;
-        text-align: center;        
+        right: 0;        
     }
 }

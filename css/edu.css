@@ -5,17 +5,17 @@
 }
 
 .show{
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
 }
 
-.show h3{
-	text-align: center;
+.show h3{	
 	margin: 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
     letter-spacing: .2rem;
     text-transform: uppercase;
     color: rgba(0, 0, 0, .4);
+    font-style: oblique;    
 }
 
 .show h3 span{
@@ -25,6 +25,11 @@
 
 .show p{
 	margin: 0;
+	font-size: .8rem;
+	text-align: justify;
+	line-height: 1.5rem;
+	padding: 3px 0 10px;
+	border-bottom: 1px solid;
 }
 
 @media only screen and (max-width: 700px){
@@ -32,6 +37,9 @@
 		width: 100%;
 	}
 	.show h3{
-		font-size: 1rem;		
+		font-size: .9rem;		
+	}
+	.show p{
+		display: none;
 	}
 }

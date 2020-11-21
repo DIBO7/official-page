@@ -5,7 +5,7 @@
 }
 
 .row{
-    width: 96%;
+    width: 97%;
     margin: 10px auto;
 
 }
@@ -17,11 +17,11 @@
     font-weight: 900;
 }
 
-.row div{
-	font-size: 1.2rem;
+.row p{
+	font-size: .9rem;
 	margin: 5px 0;
-	font-style: oblique;
-	text-align: justify
+	text-align: justify;
+	color: var(--main-primary);
 }
 
 @media only screen and (max-width: 700px){
